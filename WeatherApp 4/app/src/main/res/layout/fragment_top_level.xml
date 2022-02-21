@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.TopLevelFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearTopLevelFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:minHeight="200dp"
+            app:cardBackgroundColor="@color/darkGray"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="3dp"
+            app:cardMaxElevation="2dp"
+            app:cardPreventCornerOverlap="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="105dp"
+                        android:layout_height="121dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="150dp"
+                        android:textColor="@color/white"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="75dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="150dp"
+                        android:textColor="@color/lightGray"
+                        android:textSize="22sp"/>
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:id="@+id/cardPlace"
+                        android:text="Los Angeles, California"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                       />
+
+                    <ImageView
+                        android:layout_width="42dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/information_outline" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:minHeight="150dp"
+            app:cardBackgroundColor="@color/darkGray"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="2dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="0,1,2,3"
+                android:layout_marginTop="10dp">
+
+                <TableRow>
+
+                    <ImageView
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/water_percent" />
+
+                    <ImageView
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/weather_windy" />
+
+                    <ImageView
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/eye_outline" />
+
+                    <ImageView
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/gauge" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:padding="3dip"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:text="99%"
+                        android:id="@+id/humidity"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:padding="3dip"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:id="@+id/windSpeed"
+                        android:text="4.05mph"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:padding="3dip"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:id="@+id/visibility"
+                        android:text="9.84mi"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:padding="3dip"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:id="@+id/pressure"
+                        android:text="29.83inHg"
+                        android:textSize="20sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:padding="3dip"
+                        android:text="Humidity"
+                        android:textColor="@color/lightGray"/>
+
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:padding="3dip"
+                        android:text="WindSpeed"
+                        android:textColor="@color/lightGray"/>
+
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:padding="3dip"
+                        android:text="Visibility"
+                        android:textColor="@color/lightGray"/>
+
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:padding="3dip"
+                        android:text="Pressure"
+                        android:textColor="@color/lightGray"/>
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    </ScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="270dp"
+            android:layout_marginTop="550dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/roundcorner"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/map_marker_plus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

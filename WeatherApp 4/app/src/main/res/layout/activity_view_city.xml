@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ViewCity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarViewCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkGray"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/toolbarTextViewCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Los Angeles, California"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="2dp" />
+
+            <ImageButton
+                android:id="@+id/backButtonViewCity"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:background="@color/darkGray"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="1dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black">
+
+            <LinearLayout
+                android:id="@+id/linearViewCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search Result"
+                    android:textColor="@color/lightGray"
+                    android:layout_margin="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="20sp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardOneViewCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:minHeight="200dp"
+                    app:cardBackgroundColor="@color/darkGray"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="3dp"
+                    app:cardMaxElevation="2dp"
+                    app:cardPreventCornerOverlap="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="40dp">
+
+                            <ImageView
+                                android:id="@+id/imgViewCity"
+                                android:layout_width="105dp"
+                                android:layout_height="121dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginLeft="33dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/ic_clear_day" />
+
+                            <TextView
+                                android:id="@+id/temperatureViewCity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="150dp"
+                                android:text="56"
+                                android:textColor="@color/white"
+                                android:textSize="26sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/descriptionViewCity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="75dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="150dp"
+                                android:text="Sunny"
+                                android:textColor="@color/lightGray"
+                                android:textSize="22sp"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/cardPlaceViewCity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="bottom|center"
+                                    android:gravity="center"
+                                    android:text="Los Angeles, California"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp" />
+
+                                <ImageView
+                                    android:layout_width="42dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="right"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/information_outline" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:minHeight="150dp"
+                    app:cardBackgroundColor="@color/darkGray"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="2dp"
+                    app:cardMaxElevation="2dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="0,1,2,3"
+                        android:layout_marginTop="10dp">
+
+                        <TableRow>
+
+                            <ImageView
+
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/water_percent" />
+
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/weather_windy" />
+
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/eye_outline" />
+
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/gauge" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:padding="3dip"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="99%"
+                                android:textSize="20sp"
+                                android:id="@+id/humidityViewCity"/>
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:padding="3dip"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="4.05mph"
+                                android:textSize="20sp"
+                                android:id="@+id/windSpeedViewCity"/>
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:padding="3dip"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="9.84mi"
+                                android:textSize="20sp"
+                                android:id="@+id/visibilityViewCity"/>
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:padding="3dip"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:text="29.83inHg"
+                                android:textSize="20sp"
+                                android:id="@+id/pressureViewCity"/>
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:padding="3dip"
+                                android:text="Humidity"
+                                android:textColor="@color/lightGray"/>
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:padding="3dip"
+                                android:text="WindSpeed"
+                                android:textColor="@color/lightGray"/>
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:padding="3dip"
+                                android:text="Visibility"
+                                android:textColor="@color/lightGray"/>
+
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:padding="3dip"
+                                android:text="Pressure"
+                                android:textColor="@color/lightGray"/>
+                        </TableRow>
+                    </TableLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imageButtonViewCity"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="575dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/roundcorner"
+                android:padding="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/map_marker_plus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
